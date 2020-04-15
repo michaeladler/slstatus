@@ -62,9 +62,10 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ temp       , "TEMP: %s C "  , "/sys/class/thermal/thermal_zone1/temp"   } ,
-	{ keymap     , "XKB: %s "  , NULL    } ,
-	{ wifi_essid , "WIFI: %s " , "wlan0" } ,
-	{ datetime   , "%s"    , "%Y-%m-%d %H:%M" } ,
+	/* function  , format        , argument */
+	{ temp       , "TEMP: %s C " , "/sys/class/thermal/thermal_zone1/temp"   } ,
+	{ keymap     , "XKB: %s "    , NULL    }                                   ,
+	{ wifi_essid , "  %s "      , "wlan0" }                                   ,
+	{ vol_perc   , "  %s "      , "hw:PCH" }                                   ,
+	{ datetime   , "%s"          , "%Y-%m-%d %H:%M" }                          ,
 } ;
